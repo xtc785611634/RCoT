@@ -11,8 +11,10 @@ The illustration of active-prompt is shown in the figure below.
 
 
 ## Requirements
-`pip install openai`
+Make sure you have Python>=3.8 installed on your machine.
+pip install torch==1.8.2+cu111 torchtext==0.9.2 -f https://download.pytorch.org/whl/lts/1.8/torch_lts.html
 
+`pip install openai`
 Put your `OpenAI API KEY` to the `API_KEY` variable of `utils.py`.
 
 
