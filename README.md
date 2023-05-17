@@ -1,4 +1,4 @@
-# RCOT: Detecting and Rectifying Factual Inconsistency by Reversing Chain-Of-Thought
+# RCoT: Detecting and Rectifying Factual Inconsistency by Reversing Chain-Of-Thought
 
 ## Method
 “RCoT, a novel method for detecting and rectifying condition hallucination, overlooking and question misinterpretation in CoT“
