@@ -19,8 +19,14 @@ Put your `OpenAI API KEY` to the `API_KEY` variable of `utils.py`.
 ## Quick Start
 For a quick start, you can directly run inference with RCoT(proposed in the paper).
 
+#zero-shot-cot
 ```shell
 python inference.py --dataset="gsm8k" --model="gpt-3.5-turbo" --method="zero_shot_cot" --random_seed=99 --multipath=1 --temperature=0 --api_time_interval=0.5 --test_size=256 --shot=0 --flag="gpt"
+```
+#few-shot-cot(Active-prompting)
+```shell
+python inference.py --dataset="asdiv" --model="gpt-3.5-turbo" --method="few_shot_cot" --random_seed=24 --multipath=1 --temperature=0 --api_time_interval=0.5 --test_size=256 --shot=4 --flag="gpt" --prompt_path=./inference_prompts/gsm8k_k=10 --output_dir=./few_shot_results
+
 ```
 
 ## Important arguments
@@ -29,4 +35,4 @@ python inference.py --dataset="gsm8k" --model="gpt-3.5-turbo" --method="zero_sho
    * `--method`: zero-shot-cot or few-shot-cot.
    * `--test_size`: number of test questions.
    * `--api_time_interval`: the time interval when requesting GPT-3 API. Suggested interval is larger than 1 second.
-
+   * `--shot`: number of demonstration examples.
